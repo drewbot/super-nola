@@ -1,7 +1,9 @@
 
 // Core Styles
-.container-fluid {
-	max-width: 1160px;
+body {
+	@include amaranth();
+	color: lighten($dark-brown, 5%);
+	-webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5 {
@@ -9,17 +11,49 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-	font-size: 4.8em;
 	text-align: center;
+	font-size: 4.8em;
 }
 
 h2 {
-	font-size: 3em;
 	text-align: center;
+	font-size: 3em;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.8em;
+	line-height: 1.4;
+	margin-bottom: 0.8em;
+}
+
+p {
+	font-size: 1.4em;
+	line-height: 1.7;
+	margin-bottom: 2em;
+}
+
+a {
+	text-decoration: none;
+	color: lighten($dark-brown, 5%);
+}
+
+ul {
+	li {
+		font-size: 1.4em;
+		line-height: 1.7;
+	}
+}
+
+button {
+	background: none;
+	border: none;
+	@include paytone();
+	outline: none;
+	font-size: 1.8em;
+}
+
+.container-fluid {
+	max-width: 1160px;
 }
 
 // Header Styles
@@ -28,32 +62,38 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-}
-
-.logo {
-	display: inline-block;
-	margin: 0 auto;
-	background-color: $beige;
-	img {
-		width: 100%;
+	z-index: 9999;
+	.menu {
+		display: inline-block;
+		background-color: $beige;
+		background: url('../images/paper-bag-texture.png');
+		background-repeat: no-repeat;
+	  background-size: 100%;
+		button.nav-menu {
+			margin: 20px 20px 10px 20px;
+			padding: 0 5px;
+		}
+		nav {
+			padding: 0 26px 26px 26px;
+			ul {
+				li {
+					line-height: 1.4;
+				}
+			}
+		}
 	}
-}
-
-.menu {
-	display: inline-block;
-	background-color: $beige;
 }
 
 // Intro Styles
 section.intro {
-	height: 580px;
-	background: url('../images/super-nola-granola-from-bowl-2.jpg');
+	height: 590px;
+	background: url('../images/super-nola-granola-from-bowl.jpg');
 	background-repeat: no-repeat;
   background-size: 100%;
   color: $beige;
   .overlay {
-  	padding-top: 250px;
-  	height: 550px;
+  	padding-top: 45px;
+  	height: 600px;
   	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
 		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -65,10 +105,50 @@ section.intro {
   }
 }
 
-// About Styles
+	img.logo {
+		display: block;
+		margin: 0 auto 25px auto;
+		width: 200px;
+	}
+
+// Product Styles
+section.product {
+	.container-fluid {
+		padding: 50px 0 50px 0;
+	}
+}
+
 .card {
 	width: 100%;
 	height: 200px;
 	background-color: $beige;
 	margin: 0 10px;
+}
+
+// About
+section.about {
+	.container-fluid {
+		padding: 50px 0 50px 0;
+	}
+}
+
+// Shop
+section.shop {
+	.container-fluid {
+		padding: 50px 0 50px 0;
+	}
+}
+
+// Contact
+section.contact {
+	.container-fluid {
+		padding: 50px 0 50px 0;
+	}
+}
+
+// Footer Styles
+footer {
+	.container-fluid {
+		padding: 50px 0 50px 0;
+	}
 }
