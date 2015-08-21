@@ -41,6 +41,12 @@ ul {
 	li {
 		font-size: 1.4em;
 		line-height: 1.7;
+		a {
+			display: block;
+			&:hover {
+				color: lighten($dark-brown, 20%);
+			}
+		}
 	}
 }
 
@@ -50,6 +56,9 @@ button {
 	@include paytone();
 	outline: none;
 	font-size: 1.8em;
+	&:hover {
+		color: lighten($dark-brown, 20%);
+	}
 }
 
 .container-fluid {
@@ -70,14 +79,15 @@ header {
 		background-repeat: no-repeat;
 	  background-size: 100%;
 		button.nav-menu {
-			margin: 20px 20px 10px 20px;
-			padding: 0 5px;
+			padding: 20px 25px 10px 25px;
 		}
 		nav {
-			padding: 0 26px 26px 26px;
 			ul {
 				li {
 					line-height: 1.4;
+					a {
+						padding: 0 26px 0 26px;
+					}
 				}
 			}
 		}
