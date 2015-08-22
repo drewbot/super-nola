@@ -68,6 +68,10 @@ button {
 	max-width: 1160px;
 }
 
+.outer {
+	padding: 0 10px;
+}
+
 // Header Styles
 
 header {
@@ -179,10 +183,11 @@ section.product {
 }
 
 .card {
-	width: 100%;
-	height: 200px;
-	background-color: $beige;
-	margin: 0 10px;
+	div {
+		width: 100%;
+		height: 200px;
+		background-color: $beige;
+	}
 }
 
 // Shop
