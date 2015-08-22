@@ -7,19 +7,9 @@ $(document).ready(function(){
 
 	console.log(cards);
 
-	// for (var i = 0; i < cards.length; i++) {
-	// 	console.log(cards[i]);
-
-	// }
-
-	function appendToCard(card) {
-		// $('div.card').text('shiza');
-		// card.text('shiza');
-		console.log(card);
-		return card;
+	for (var i = 0; i < cards.length; i++) {
+		console.log(cards[i]);
 	}
-
-	cards.forEach(appendToCard);
 
 });
 
@@ -35,3 +25,13 @@ $(document).ready(function(){
 //         imgSrc.attr('src','image2.jpg');
 //     }
 // });
+
+// Show Nav
+$('.nav-menu').click(function(){
+	$('nav').toggleClass('show');
+	if ($('nav').hasClass('show')) {
+		$('button.nav-menu').text("Hide");
+	} else {
+		$('button.nav-menu').text("Menu");
+	}
+})
