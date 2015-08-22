@@ -35,7 +35,7 @@ $('.menu').mouseleave(function(){
 	$('nav').toggleClass('show');
 })
 
-// Show Nav (Mobile)
+// // Show Nav (Mobile)
 // $('.nav-menu').click(function(){
 // 	$('nav').toggleClass('show');
 // 	if ($('nav').hasClass('show')) {
