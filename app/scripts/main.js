@@ -26,12 +26,21 @@ $(document).ready(function(){
 //     }
 // });
 
-// Show Nav
-$('.nav-menu').click(function(){
+// Show Nav (Desktop)
+$('.menu').mouseenter(function(){
 	$('nav').toggleClass('show');
-	if ($('nav').hasClass('show')) {
-		$('button.nav-menu').text("Hide");
-	} else {
-		$('button.nav-menu').text("Menu");
-	}
 })
+
+$('.menu').mouseleave(function(){
+	$('nav').toggleClass('show');
+})
+
+// Show Nav (Mobile)
+// $('.nav-menu').click(function(){
+// 	$('nav').toggleClass('show');
+// 	if ($('nav').hasClass('show')) {
+// 		$('button.nav-menu').text("Hide");
+// 	} else {
+// 		$('button.nav-menu').text("Menu");
+// 	}
+// })
