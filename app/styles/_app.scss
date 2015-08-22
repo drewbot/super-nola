@@ -43,7 +43,7 @@ ul {
 		a {
 			display: block;
 			&:hover {
-				color: lighten($dark-brown, 20%);
+				color: lighten($dark-brown, 25%);
 			}
 		}
 	}
@@ -56,7 +56,7 @@ button {
 	outline: none;
 	font-size: 1.8em;
 	&:hover {
-		color: lighten($dark-brown, 20%);
+		color: lighten($dark-brown, 25%);
 	}
 }
 
@@ -73,6 +73,8 @@ header {
 	z-index: 9999;
 	.menu {
 		display: inline-block;
+		padding-bottom: 20px;
+		// height: 230px;
 		background-color: $beige;
 		background: url('../images/paper-bag-texture.png');
 		background-repeat: no-repeat;
