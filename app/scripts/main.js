@@ -44,3 +44,7 @@ $('.menu').mouseleave(function(){
 // 		$('button.nav-menu').text("Menu");
 // 	}
 // })
+
+var ingredients = "CONTAINS COCONUT OIL, WALNUTS"
+
+console.log(ingredients.toLowerCase());
