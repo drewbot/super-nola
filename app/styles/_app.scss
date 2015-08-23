@@ -28,7 +28,7 @@ h3 {
 p {
 	font-size: 1.4em;
 	line-height: 1.7;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 a {
@@ -43,7 +43,6 @@ ul {
 		a {
 			display: block;
 			&:hover {
-				// color: lighten($dark-brown, 25%);
 				color: $beige;
 				transition: all 120ms ease-in; 
 			}
@@ -58,7 +57,6 @@ button {
 	outline: none;
 	font-size: 1.8em;
 	&:hover {
-		// color: lighten($dark-brown, 25%);
 		color: $beige;
 		transition: all 120ms ease-in;
 	}
@@ -109,9 +107,6 @@ header {
 			ul {
 				li {
 					line-height: 1.4;
-					a {
-						padding: 0 26px 0 26px;
-					}
 					&:first-of-type {
 						a {
 							padding: 59px 26px 0 26px;
@@ -121,6 +116,9 @@ header {
 						a {
 							padding: 0 26px 16px 26px;
 						}
+					}
+					a {
+						padding: 0 26px 0 26px;
 					}
 				}
 			}
@@ -166,14 +164,31 @@ section.about {
 				top: -150px;
 				right: 0px;
 				width: 142px;
+				&:hover {
+					figure {
+						figcaption {
+							color: $beige;
+							transition: all 120ms ease-in;
+						}
+					}
+				}
 				figure {
 					img {
 						width: 100%;
 					}
 					figcaption {
-
+				    position: absolute;
+				    top: 121px;
+				    left: 36px;
+				    @include paytone();
+				    font-size: 1.8em;
 					}
 				}
+			}
+			.about-image {
+				width: 100%;
+				border: 10px solid $beige;
+				border-radius: 50%;
 			}
 			h3 {
 				margin-bottom: 0.8em;

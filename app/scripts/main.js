@@ -28,11 +28,11 @@ $(document).ready(function(){
 
 // Show Nav (Desktop)
 $('.menu').mouseenter(function(){
-	$('nav').toggleClass('show');
+	$('nav').addClass('show');
 })
 
 $('.menu').mouseleave(function(){
-	$('nav').toggleClass('show');
+	$('nav').removeClass('show');
 })
 
 // // Show Nav (Mobile)
