@@ -45,6 +45,13 @@ $('.menu').mouseleave(function(){
 // 	}
 // })
 
-var ingredients = "CONTAINS COCONUT OIL, WALNUTS"
 
-console.log(ingredients.toLowerCase());
+
+function stringToLower(string){
+	var ingredients = string
+	console.log(ingredients.toLowerCase());
+}
+
+var lineLengthString = "my day with a breakfast that was high in fiber and protein, contained no "
+lineLengthArray = lineLengthString.split('');
+console.log(lineLengthArray.length);
