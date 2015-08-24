@@ -48,10 +48,16 @@ $('.menu').mouseleave(function(){
 
 
 function stringToLower(string){
-	var ingredients = string
+	var ingredients = string;
 	console.log(ingredients.toLowerCase());
 }
 
-var lineLengthString = "my day with a breakfast that was high in fiber and protein, contained no "
-lineLengthArray = lineLengthString.split('');
-console.log(lineLengthArray.length);
+stringToLower('SUPER NOLA ALL CAPS SCREAMIN')
+
+function printLineLength(string) {
+	var lineLengthString = string;
+	lineLengthArray = lineLengthString.split('');
+	console.log('Your line is ' + lineLengthArray.length + ' characters long');
+}
+
+printLineLength('grain, hemp hearts (raw shelled hemp seeds), honey, organic apple sauce (apples, ascorbic ')
