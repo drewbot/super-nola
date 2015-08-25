@@ -46,7 +46,7 @@ $('.menu').mouseleave(function(){
 // })
 
 
-
+// Developer Utilities
 function stringToLower(string){
 	var ingredients = string;
 	console.log(ingredients.toLowerCase());
