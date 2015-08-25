@@ -89,7 +89,7 @@ header {
 			background: url('../images/paper-bag-texture-menu.png');
 			background-repeat: no-repeat;
 		  background-size: cover;
-		  @include box-shadow(2px 2px 4px 0px rgba(35,31,32,0.13));
+		  // @include box-shadow(2px 2px 4px 0px rgba(35,31,32,0.13));
 		  text-align: left;
 		  z-index: 9999;
 		}
@@ -100,11 +100,11 @@ header {
 			background: url('../images/paper-bag-texture.png');
 			background-repeat: no-repeat;
 		  background-size: 100%;
-		  @include box-shadow(2px 2px 4px 0px rgba(35,31,32,0.13));
+		  @include box-shadow(2px 2px 4px 0px rgba(35,31,32,0.37));
 		  z-index: 9998;
 		  transition: all 240ms ease-in;
 		  &.show {
-		  	top: 10px;
+		  	top: 0px;
 		  }
 			ul {
 				li {
