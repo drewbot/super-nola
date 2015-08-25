@@ -60,4 +60,4 @@ function printLineLength(string) {
 	console.log('Your line is ' + lineLengthArray.length + ' characters long');
 }
 
-printLineLength('grain, hemp hearts (raw shelled hemp seeds), honey, organic apple sauce (apples, ascorbic ')
+printLineLength('Grove", which provides the characters and ')
