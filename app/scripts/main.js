@@ -29,11 +29,11 @@ $(document).ready(function(){
 // Show Nav (Desktop)
 $('.menu').mouseenter(function(){
 	$('nav').addClass('show');
-})
+});
 
 $('.menu').mouseleave(function(){
 	$('nav').removeClass('show');
-})
+});
 
 // // Show Nav (Mobile)
 // $('.nav-menu').click(function(){
@@ -44,6 +44,54 @@ $('.menu').mouseleave(function(){
 // 		$('button.nav-menu').text("Menu");
 // 	}
 // })
+
+
+/////////////////////////////////// Contact form
+// focus in on new item input changes border color
+$('.contact-name input').focusin( function(){
+	$(this).css({
+		"border-bottom-color" : "#D66611"
+	});
+	$(this).attr('placeholder','');
+	$('.name-label').toggleClass('input-focus-animate');
+});
+$('.contact-email input').focusin( function(){
+	$(this).css({
+		"border-bottom-color" : "#D66611"
+	});
+	$(this).attr('placeholder','');
+	$('.email-label').toggleClass('input-focus-animate');
+});
+$('.contact-message input').focusin( function(){
+	$(this).css({
+		"border-bottom-color" : "#D66611"
+	});
+	$(this).attr('placeholder','');
+	$('.message-label').toggleClass('input-focus-animate');
+});
+
+// focus out on new item input changes border color back
+$('.contact-name input').focusout( function(){
+	$(this).css({
+		"border-bottom-color" : "#ffffff"
+	});
+	$(this).attr('placeholder','What\'s your name?');
+	$('.name-label').toggleClass('input-focus-animate');
+});
+$('.contact-email input').focusout( function(){
+	$(this).css({
+		"border-bottom-color" : "#ffffff"
+	});
+	$(this).attr('placeholder','...your email?');
+	$('.email-label').toggleClass('input-focus-animate');
+});
+$('.contact-message input').focusout( function(){
+	$(this).css({
+		"border-bottom-color" : "#ffffff"
+	});
+	$(this).attr('placeholder','What\'s up?');
+	$('.message-label').toggleClass('input-focus-animate');
+});
 
 
 // Developer Utilities
