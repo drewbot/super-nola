@@ -50,21 +50,21 @@ $('.menu').mouseleave(function(){
 // focus in on new item input changes border color
 $('.contact-name input').focusin( function(){
 	$(this).css({
-		"border-bottom-color" : "#D66611"
+		"border-bottom-color" : "#c6a377"
 	});
 	$(this).attr('placeholder','');
 	$('.name-label').toggleClass('input-focus-animate');
 });
 $('.contact-email input').focusin( function(){
 	$(this).css({
-		"border-bottom-color" : "#D66611"
+		"border-bottom-color" : "#c6a377"
 	});
 	$(this).attr('placeholder','');
 	$('.email-label').toggleClass('input-focus-animate');
 });
-$('.contact-message input').focusin( function(){
+$('.contact-message textarea').focusin( function(){
 	$(this).css({
-		"border-bottom-color" : "#D66611"
+		"border-bottom-color" : "#c6a377"
 	});
 	$(this).attr('placeholder','');
 	$('.message-label').toggleClass('input-focus-animate');
@@ -73,21 +73,21 @@ $('.contact-message input').focusin( function(){
 // focus out on new item input changes border color back
 $('.contact-name input').focusout( function(){
 	$(this).css({
-		"border-bottom-color" : "#ffffff"
+		"border-bottom-color" : "#231F20"
 	});
 	$(this).attr('placeholder','What\'s your name?');
 	$('.name-label').toggleClass('input-focus-animate');
 });
 $('.contact-email input').focusout( function(){
 	$(this).css({
-		"border-bottom-color" : "#ffffff"
+		"border-bottom-color" : "#231F20"
 	});
 	$(this).attr('placeholder','...your email?');
 	$('.email-label').toggleClass('input-focus-animate');
 });
-$('.contact-message input').focusout( function(){
+$('.contact-message textarea').focusout( function(){
 	$(this).css({
-		"border-bottom-color" : "#ffffff"
+		"border-bottom-color" : "#231F20"
 	});
 	$(this).attr('placeholder','What\'s up?');
 	$('.message-label').toggleClass('input-focus-animate');

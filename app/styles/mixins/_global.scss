@@ -24,14 +24,13 @@
 @mixin primary-input() {
     position: relative;
     display: block;
-    // margin-bottom: 20px;
     padding: 10px;
     width: 100%;
     background-color: transparent;
     border-width: 0 0 1px 0;
     border-style: solid;
-    border-color: $white;
-    color: $white;
+    border-color: $dark-brown;
+    color: $dark-brown;
     outline: none;
     @include transition(all 80ms ease-in);
     &:hover {
