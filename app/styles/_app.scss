@@ -356,6 +356,7 @@ section.contact {
         }
         .contact-message {
         	height: 120px;
+        	margin-bottom: 50px;
         }
         .name-label, .email-label, .message-label {
           position: absolute;
@@ -372,9 +373,20 @@ section.contact {
         }
         @include placeholder(1.3em, $dark-brown);
         .contact-submit {
+          padding: 16px 25px 16px 25px;
           width: auto;
+          @include paytone();
+          font-size: 1.8em;
+					background: url('../images/paper-bag-texture-menu.png');
+					background-repeat: no-repeat;
+				  background-size: cover;
+				  border-width: 0;
+				  @include box-shadow(2px 2px 4px 0px rgba(35,31,32,0.37));
+				  &:hover {
+				  	color: $beige;
+				  }
           &:focus {
-            background-color: lighten($purple, 10%)
+            color: lighten($dark-brown, 10%)
           }
         }
       }
