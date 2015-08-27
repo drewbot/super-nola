@@ -172,7 +172,7 @@ img.logo {
 // About
 section.about {
 	.container-fluid {
-		padding: 50px 0 50px 0;
+		padding: 70px 0 70px 0;
 		.row {
 			position: relative;
 			.shop-cta {
@@ -215,19 +215,30 @@ section.about {
 
 // Product Styles
 section.product {
-	background: url('../images/super-nola-granola-from-bowl.jpg');
+	background: url('../images/super-nola-granola-ingredients.jpg');
 	background-repeat: no-repeat;
   background-size: 100%;
-	.container-fluid {
-		padding: 50px 10px 50px 10px;
-		h2 {
-			margin-bottom: 20px;
-			color: $beige;
-			&:nth-of-type(2) {
-				margin-bottom: 40px;
+  .overlay {
+  	padding-top: 45px;
+  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
+		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  	.container-fluid {
+			padding: 70px 10px 70px 10px;
+			h2 {
+				margin-bottom: 10px;
+				color: $beige;
+				&:nth-of-type(2) {
+					margin-bottom: 40px;
+				}
 			}
 		}
-	}
+  }
 }
 
 .card {
@@ -242,12 +253,44 @@ section.product {
 		text-align: center;
 		color: $dark-brown;
 	}
+	// .caw {
+	// 	color: $purple;
+	// }
+	// .pfp {
+	// 	color: $orange;
+	// }
+	// .bca {
+	// 	color: $dark-brown;
+	// }
+	// .pvh {
+	// 	color: $green;
+	// }
 }
 
 // Shop
 section.shop {
 	.container-fluid {
-		padding: 50px 0 50px 0;
+		padding: 70px 0 70px 0;
+		.shop-container {
+			padding-top: 160px;
+		}
+		.locations {
+			padding: 0 30px 0 30px;
+			h2 {
+				text-align: left;
+			}
+			h3 {
+				text-align: left;
+				margin-bottom: 30px;
+			}
+			ul.location-list {
+				font-size: 1em;
+				ul.location-address {
+					font-size: 0.55em;
+					margin-bottom: 30px;
+				}
+			}
+		}
 	}
 }
 
@@ -259,7 +302,7 @@ section.contact {
 	.contact-content {
 		padding: 0 10px 0 10px;
     .contact-links {
-      padding: 50px 30px 50px 30px;
+      padding: 70px 30px 70px 30px;
       line-height: 3.4em;
       color: $beige;
       h2 {
@@ -271,23 +314,27 @@ section.contact {
 	    }
 	    li {
 	    	text-align: right;
+	    	&:nth-of-type(3) {
+	    		margin-top: 10px;
+	    	}
 	    	a {
 	        font-size: 1em;
 	        color: $beige;
+	        text-decoration: underline;
 	        i {
 	          margin-right: 20px;
 	          margin-left: 20px;
 	          font-size: 1.3em;
 	        }
 	        &:hover {
-	          background-color: lighten($dark-brown, 7%)
+	          background-color: $dark-brown;
 	        }
 	      }
 	    }
     }
     .contact-form {
     	position: relative;
-    	padding: 50px 30px 50px 30px;
+    	padding: 70px 30px 70px 30px;
     	.contact-overlay {
     		position: absolute;
     		top: 0;
@@ -339,7 +386,26 @@ section.contact {
 
 // Footer Styles
 footer {
+	background-color: $dark-brown;
+	color: $beige;
 	.container-fluid {
-		padding: 50px 0 50px 0;
+		padding: 70px 0 70px 0;
+		ul li {
+			display: inline-block;
+			margin: 0 30px 85px 0;
+			a {
+				text-decoration: underline;
+				color: lighten($dark-brown, 35%);
+				&:hover {
+					color: $beige;
+					transition: all 120ms ease-in; 
+				}
+			}
+		}
+		.cert-stamp {
+			img {
+				width: 100%;
+			}
+		}
 	}
 }
