@@ -75,21 +75,21 @@ $('.contact-name input').focusout( function(){
 	$(this).css({
 		"border-bottom-color" : "#231F20"
 	});
-	$(this).attr('placeholder','What\'s your name?');
+	$(this).attr('placeholder','Please tell us your name');
 	$('.name-label').toggleClass('input-focus-animate');
 });
 $('.contact-email input').focusout( function(){
 	$(this).css({
 		"border-bottom-color" : "#231F20"
 	});
-	$(this).attr('placeholder','...your email?');
+	$(this).attr('placeholder','Please provide an email address');
 	$('.email-label').toggleClass('input-focus-animate');
 });
 $('.contact-message textarea').focusout( function(){
 	$(this).css({
 		"border-bottom-color" : "#231F20"
 	});
-	$(this).attr('placeholder','What\'s up?');
+	$(this).attr('placeholder','Leave us a message');
 	$('.message-label').toggleClass('input-focus-animate');
 });
 
@@ -108,4 +108,4 @@ function printLineLength(string) {
 	console.log('Your line is ' + lineLengthArray.length + ' characters long');
 }
 
-printLineLength('Grove", which provides the characters and ')
+printLineLength('day with a breakfast that was high in fiber and protein, contained no refined ')
