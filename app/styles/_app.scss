@@ -272,7 +272,7 @@ section.shop {
 	.container-fluid {
 		padding: 70px 0 70px 0;
 		.shop-container {
-			padding-top: 160px;
+			padding-top: 200px;
 			color: lighten($dark-brown, 65%)
 		}
 		.locations {
@@ -427,3 +427,66 @@ footer {
 		}
 	}
 }
+
+// Form Confirmation
+section.form-confirmation {
+	min-height: 700px;
+	height: 100vh;
+	background: url('../images/super-nola-granola-pans.jpg');
+	background-repeat: no-repeat;
+  background-size: 100%;
+  color: $beige;
+  .overlay {
+  	padding-top: 45px;
+  	min-height: 700px;
+		height: 100vh;
+  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
+		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  }
+  h2 {
+  	margin-bottom: 30px;
+  }
+  h1 {
+  	a {
+  		color: $beige;
+  		text-decoration: underline;
+  		&:hover {
+				color: darken($beige, 5%);
+				transition: all 120ms ease-in; 
+			}
+  	}
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
