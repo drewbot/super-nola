@@ -3,12 +3,7 @@
 console.log('js loaded');
 
 $(document).ready(function(){
-	console.log('document ready');
-	var cards = $('.card').toArray();
-	console.log(cards);
-	for (var i = 0; i < cards.length; i++) {
-		console.log(cards[i]);
-	}
+	// console.log('document ready');
 
 	// // Image replace based on screen width
 	// $(window).resize(function(){
@@ -42,6 +37,7 @@ $(document).ready(function(){
 	})
 
 	/////////////////////////////////// Scroll To Section
+	// (event.preventDefault() stops the flicker on click)
 	$( 'a[href|="#intro"]' ).click(function(event) {
 		event.preventDefault();
     $('html, body').animate({
@@ -110,17 +106,17 @@ $(document).ready(function(){
 		$('.pvh-details').addClass('show');
 	});
 
-	// Close product details modal
+	// Close product details modal with "x"
 	$('.close').click(function(){
 		$('.product-details').removeClass('show');
 		$('.product-details').find('.row').removeClass('show');
 	});
-
+	// Close product details modal by clicking the background
 	$('.product-details').click(function(){
 		$('.product-details').removeClass('show');
 		$('.product-details').find('.row').removeClass('show');
 	});
-
+	// Prevent clicking the container from triggering close
 	$('.product-details').find('.row').click(function(event) {
 	  event.stopPropagation();
 	});
