@@ -197,7 +197,7 @@ function stringToLower(string){
 	console.log(ingredients.toLowerCase());
 }
 
-stringToLower('SUPER NOLA ALL CAPS SCREAMIN');
+// stringToLower('SUPER NOLA ALL CAPS');
 
 function printLineLength(string) {
 	var lineLengthString = string;
@@ -205,4 +205,4 @@ function printLineLength(string) {
 	console.log('Your line is ' + lineLengthArray.length + ' characters long');
 }
 
-printLineLength('day with a breakfast that was high in fiber and protein, contained no refined ');
+// printLineLength('day with a breakfast that was high in fiber and protein, contained no refined ');
