@@ -12,21 +12,21 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	text-align: center;
-	font-size: 4.8em;
+	font-size: 1.8em;
 }
 
 h2 {
 	text-align: center;
-	font-size: 3em;
+	font-size: 1.3em;
 }
 
 h3 {
-	font-size: 1.8em;
+	font-size: 1.2em;
 	line-height: 1.4;
 }
 
 p {
-	font-size: 1.3em;
+	font-size: 0.9em;
 	line-height: 1.7;
 	margin-bottom: 1em;
 }
@@ -44,7 +44,7 @@ ul {
 			display: block;
 			&:hover {
 				color: $beige;
-				transition: all 120ms ease-in; 
+				transition: all 120ms ease-in;
 			}
 		}
 	}
@@ -69,7 +69,7 @@ button {
 	border: none;
 	@include paytone();
 	outline: none;
-	font-size: 1.8em;
+	font-size: 1.2em;
 	&:hover {
 		color: $beige;
 		transition: all 120ms ease-in;
@@ -83,6 +83,19 @@ button {
 .outer {
 	padding: 0 10px;
 }
+
+// .caw {
+// 	color: $purple;
+// }
+// .pfp {
+// 	color: $orange;
+// }
+// .bca {
+// 	color: $dark-brown;
+// }
+// .pvh {
+// 	color: $green;
+// }
 
 // Header Styles
 
@@ -98,7 +111,7 @@ header {
 		background-color: $beige;
 		button.nav-menu {
 			position: absolute;
-			width: 130px;
+			width: 104px;
 			padding: 16px 25px 16px 25px;
 			background: url('../images/paper-bag-texture-menu.png');
 			background-repeat: no-repeat;
@@ -110,7 +123,8 @@ header {
 		nav {
 			position: absolute;
 			top: -164px;
-			width: 130px;
+			width: 104px;
+			font-size: 0.85em;
 			background: url('../images/paper-bag-texture.png');
 			background-repeat: no-repeat;
 		  background-size: 100%;
@@ -144,14 +158,14 @@ header {
 
 // Intro Styles
 section.intro {
-	height: 590px;
+	height: 240px;
 	background: url('../images/super-nola-granola-from-bowl.jpg');
 	background-repeat: no-repeat;
   background-size: 100%;
   color: $beige;
   .overlay {
-  	padding-top: 45px;
-  	height: 600px;
+  	padding-top: 25px;
+  	height: 220px;
   	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
 		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -161,12 +175,11 @@ section.intro {
 		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
   }
-}
-
-img.logo {
-	display: block;
-	margin: 0 auto 25px auto;
-	width: 200px;
+	img.logo {
+		display: block;
+		margin: 0 auto 15px auto;
+		width: 120px
+	}
 }
 
 // About
@@ -177,9 +190,9 @@ section.about {
 			position: relative;
 			.shop-cta {
 				position: absolute;
-				top: -150px;
+				top: -215px;
 				right: 20px;
-				width: 142px;
+				width: 112px;
 				&:hover {
 					figure {
 						figcaption {
@@ -194,22 +207,23 @@ section.about {
 					}
 					figcaption {
 				    position: absolute;
-				    top: 121px;
+				    top: 100px;
 				    left: 36px;
 				    @include paytone();
-				    font-size: 1.8em;
+				    font-size: 1.2em;
 					}
 				}
 			}
 			.about-image {
 				width: 100%;
-				border: 10px solid $bag-brown;
+				border: 5px solid $bag-brown;
 				border-radius: 50%;
 			}
 			h3 {
 				margin-bottom: 0.8em;
+				max-width: 600px;
 			}
-		}	
+		}
 	}
 }
 
@@ -237,34 +251,80 @@ section.product {
 					margin-bottom: 40px;
 				}
 			}
+			.card {
+				padding: 50px 20px 50px 20px;
+				background-color: $beige;
+				border-radius: 6px;
+				div {
+					&:hover {
+						cursor: pointer;
+					}
+					img {
+						display: block;
+						margin: 0 auto 20px auto;
+						width: 70%;
+					}
+					h3 {
+						text-align: center;
+						color: $dark-brown;
+					}
+				}
+			}
 		}
   }
 }
 
-.card {
-	padding: 50px 20px 50px 20px;
-	background-color: $beige;
-	border-radius: 6px;
-	img {
-		display: block;
-		margin: 0 auto 20px auto;
+// Product Detail Styles
+div.product-details {
+	display: none;
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow-y: scroll;
+	.container-fluid {
+		padding: 70px 10px 0 10px;
+		.caw-details, .pfp-details, .bca-details, .pvh-details {
+			display: none;
+			position: relative;
+			padding: 50px 20px 50px 20px;
+			background-color: $beige;
+			border-radius: 6px;
+			.close {
+				position: absolute;
+				top: 20px;
+				right:20px;
+				cursor: pointer;
+				strong {
+					margin-left: 10px;
+					font-size: 1.8em;
+					line-height: 0.5;
+				}
+			}
+			img {
+				margin: 0 auto;
+		    width: 70%;
+		    display: block;
+				&.nutrition-facts {
+					width: 90%;
+				}
+				&.sc-product {
+					margin-top: 15px;
+				}
+			}
+			h3 {
+		    font-size: 1.8em;
+		    line-height: 0.8;
+		    margin-bottom: 20px;
+			}
+			p {
+				font-size: 1.15em;
+			}
+		}
 	}
-	h3 {
-		text-align: center;
-		color: $dark-brown;
-	}
-	// .caw {
-	// 	color: $purple;
-	// }
-	// .pfp {
-	// 	color: $orange;
-	// }
-	// .bca {
-	// 	color: $dark-brown;
-	// }
-	// .pvh {
-	// 	color: $green;
-	// }
 }
 
 // Shop
@@ -416,7 +476,7 @@ footer {
 				color: lighten($dark-brown, 35%);
 				&:hover {
 					color: $beige;
-					transition: all 120ms ease-in; 
+					transition: all 120ms ease-in;
 				}
 			}
 		}
@@ -458,35 +518,113 @@ section.form-confirmation {
   		text-decoration: underline;
   		&:hover {
 				color: darken($beige, 5%);
-				transition: all 120ms ease-in; 
+				transition: all 120ms ease-in;
 			}
   	}
   }
 }
 
+@media only screen and (min-width: $screen-xs-min) {
+
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+	h1 {
+		text-align: center;
+		font-size: 2.8em;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2.2em;
+	}
+
+	h3 {
+		font-size: 1.8em;
+		line-height: 1.4;
+	}
+
+	p {
+		font-size: 1.3em;
+	}
+
+	button {
+		font-size: 1.8em;
+	}
 
 
+	header {
+		.menu {
+			button.nav-menu {
+				width: 130px;
+			}
+			nav {
+				width: 130px;
+				font-size: 1em
+			}
+		}
+	}
 
+	section.intro {
+		height: 400px;
+		.overlay {
+			padding-top: 45px;
+			height: 400px;
+		}
+		img.logo {
+			margin: 0 auto 25px auto;
+			width: 150px;
+		}
+	}
 
+}
 
+@media only screen and (min-width: $screen-md-min) {
+	h1 {
+		text-align: center;
+		font-size: 4.8em;
+	}
 
+	h2 {
+		text-align: center;
+		font-size: 3em;
+	}
 
+	section.intro {
+		height: 590px;
+		.overlay {
+			height: 600px;
+		}
+		img.logo {
+			width: 200px;
+		}
+	}
 
+	section.about {
+		.container-fluid {
+			.row {
+				.shop-cta {
+					width: 142px;
+					figure {
+						figcaption {
+							top: 120px;
+					    font-size: 1.8em;
+						}
+					}
+				}
+				.about-image {
+					border-width: 10px;
+				}
+			}
+		}
+	}
 
+}
 
+@media only screen and (min-width: $screen-lg-min) {
 
+}
 
+@media only screen and (min-width: 1400px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
