@@ -31,15 +31,15 @@ $(document).ready(function(){
 		$('nav').removeClass('show');
 	});
 
-	// // Show Nav (Mobile)
-	// $('.nav-menu').click(function(){
-	// 	$('nav').toggleClass('show');
-	// 	if ($('nav').hasClass('show')) {
-	// 		$('button.nav-menu').text("Hide");
-	// 	} else {
-	// 		$('button.nav-menu').text("Menu");
-	// 	}
-	// })
+	// Show Nav (Mobile)
+	$('.nav-menu').click(function(){
+		$('nav').toggleClass('show');
+		if ($('nav').hasClass('show')) {
+			$('button.nav-menu').text("Hide");
+		} else {
+			$('button.nav-menu').text("Menu");
+		}
+	})
 
 	/////////////////////////////////// Scroll To Section
 	$( 'a[href|="#intro"]' ).click(function(event) {
