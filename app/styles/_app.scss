@@ -333,10 +333,12 @@ div.product-details {
 // Shop
 section.shop {
 	.container-fluid {
-		padding: 70px 0 70px 0;
+		padding: 0 0 70px 0;
 		.shop-container {
-			padding-top: 200px;
-			color: lighten($dark-brown, 65%)
+			color: lighten($dark-brown, 65%);
+			h2 {
+				margin-bottom: 70px;
+			}
 		}
 		.locations {
 			padding: 0 30px 0 30px;
@@ -348,7 +350,7 @@ section.shop {
 				margin-bottom: 30px;
 			}
 			ul.location-list {
-				font-size: 1em;
+				font-size: 0.8em;
 				li:last-of-type {
 					ul.location-address {
 						margin-bottom: 0;
@@ -382,6 +384,7 @@ section.contact {
 	    	text-align: right;
 	    }
 	    li {
+				font-size: 0.95em;
 	    	text-align: right;
 	    	&:nth-of-type(3) {
 	    		margin-top: 10px;
@@ -404,6 +407,7 @@ section.contact {
     .contact-form {
     	position: relative;
     	padding: 70px 30px 70px 30px;
+			font-size: 0.8em;
     	.contact-overlay {
     		position: absolute;
     		top: 0;
@@ -417,7 +421,7 @@ section.contact {
         .contact-name, .contact-email, .contact-message {
           position: relative;
           margin-bottom: 20px;
-          height: 60px;
+          height: 30px;
           input, textarea {
             position: absolute;
             bottom: 0;
@@ -474,6 +478,7 @@ footer {
 		ul li {
 			display: inline-block;
 			margin: 0 30px 85px 0;
+			font-size: 1em;
 			a {
 				text-decoration: underline;
 				color: lighten($dark-brown, 35%);
@@ -605,6 +610,53 @@ section.form-confirmation {
 		}
 	}
 
+	section.shop {
+		.container-fluid {
+			.shop-container {
+				padding-top: 200px;
+			}
+			.locations {
+				ul.location-list {
+					font-size: 1em;
+					ul.location-address {
+						font-size: 0.55em;
+					}
+				}
+			}
+		}
+	}
+
+	section.contact {
+		.contact-content {
+	    .contact-links {
+	      line-height: 3.4em;
+	      color: $beige;
+	      h2 {
+		      margin-bottom: 30px;
+		    }
+				li {
+					font-size: 1.4em;
+				}
+			}
+			.contact-form {
+				font-size: 1em;
+	      form {
+	        .contact-name, .contact-email, .contact-message {
+	          height: 60px;
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		.container-fluid {
+			ul li {
+				font-size: 1.4em;
+			}
+		}
+	}
+
 }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -656,6 +708,12 @@ section.form-confirmation {
 			.row {
 
 			}
+		}
+	}
+
+	section.shop {
+		.container-fluid {
+			padding: 70px 0 70px 0;
 		}
 	}
 
