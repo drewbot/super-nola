@@ -42,7 +42,7 @@ $(document).ready(function(){
 	// })
 
 	/////////////////////////////////// Scroll To Section
-	$( "a[href|='#intro']" ).click(function(event) {
+	$( 'a[href|="#intro"]' ).click(function(event) {
 		event.preventDefault();
     $('html, body').animate({
       scrollTop: $('#intro').offset().top
@@ -78,6 +78,16 @@ $(document).ready(function(){
 	});
 
 	/////////////////////////////////// Product
+
+	// get the highest div height of the product containers
+	var highestCol = Math.max(
+		$('.caw').height(),
+		$('.pfp').height(),
+		$('.bca').height(),
+		$('.pvh').height()
+	);
+	// Apply the highest div height to all of the product containers
+	$('.card').find('div').height(highestCol);
 
 	// Open product details modal
 	$('.caw').click(function(){
@@ -163,6 +173,22 @@ $(document).ready(function(){
 	});
 
 }); // End Document Ready
+
+// Window resize
+$(window).resize(function () {
+
+	console.log('window resized')
+	// get the highest div height of the product containers
+	var highestCol = Math.max(
+		$('.caw').height(),
+		$('.pfp').height(),
+		$('.bca').height(),
+		$('.pvh').height()
+	);
+	// Apply the highest div height to all of the product containers
+	$('.card').find('div').height(highestCol);
+
+});
 
 
 // Developer Utilities

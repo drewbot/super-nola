@@ -256,6 +256,9 @@ section.product {
 				background-color: $beige;
 				border-radius: 6px;
 				div {
+					&:nth-child(-n+2){
+						margin-bottom: 40px;
+					}
 					&:hover {
 						cursor: pointer;
 					}
@@ -287,7 +290,7 @@ div.product-details {
 	overflow-y: scroll;
 	.container-fluid {
 		padding: 70px 10px 0 10px;
-		.caw-details, .pfp-details, .bca-details, .pvh-details {
+		.row {
 			display: none;
 			position: relative;
 			padding: 50px 20px 50px 20px;
@@ -316,12 +319,12 @@ div.product-details {
 				}
 			}
 			h3 {
-		    font-size: 1.8em;
+		    font-size: 1.2em;
 		    line-height: 0.8;
 		    margin-bottom: 20px;
 			}
 			p {
-				font-size: 1.15em;
+				font-size: 0.9em;
 			}
 		}
 	}
@@ -540,8 +543,7 @@ section.form-confirmation {
 	}
 
 	h3 {
-		font-size: 1.8em;
-		line-height: 1.4;
+		font-size: 1.4em;
 	}
 
 	p {
@@ -551,7 +553,6 @@ section.form-confirmation {
 	button {
 		font-size: 1.8em;
 	}
-
 
 	header {
 		.menu {
@@ -577,6 +578,33 @@ section.form-confirmation {
 		}
 	}
 
+	section.product {
+	  .overlay {
+	  	.container-fluid {
+				.card {
+					div {
+						&:nth-child(-n+2){
+							margin-bottom: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div.product-details {
+		.container-fluid {
+			.row {
+				h3 {
+			    font-size: 1.8em;
+				}
+				p {
+					font-size: 1.15em;
+				}
+			}
+		}
+	}
+
 }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -588,6 +616,10 @@ section.form-confirmation {
 	h2 {
 		text-align: center;
 		font-size: 3em;
+	}
+
+	h3 {
+		font-size: 1.6em;
 	}
 
 	section.intro {
@@ -615,6 +647,14 @@ section.form-confirmation {
 				.about-image {
 					border-width: 10px;
 				}
+			}
+		}
+	}
+
+	div.product-details {
+		.container-fluid {
+			.row {
+
 			}
 		}
 	}
