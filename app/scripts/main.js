@@ -172,17 +172,26 @@ $(document).ready(function(){
 
 // Window resize
 $(window).resize(function () {
+	console.log('window resized');
 
-	console.log('window resized')
-	// get the highest div height of the product containers
-	var highestCol = Math.max(
-		$('.caw').height(),
-		$('.pfp').height(),
-		$('.bca').height(),
-		$('.pvh').height()
-	);
-	// Apply the highest div height to all of the product containers
-	$('.card').find('div').height(highestCol);
+	// maintain same column height so they don't stagger when one is taller
+	// on window resize because we already do this on document ready
+	// but columns' content will resize per screen size
+	// Get the actual height after screen and columns' content shrinks
+	function getActualHeight(){
+		// set the product columns' height back to auto
+		$('.card').find('div').height('auto');
+		// get the highest div height of the columns
+		var highestCol = Math.max(
+			$('.caw').height(),
+			$('.pfp').height(),
+			$('.bca').height(),
+			$('.pvh').height()
+		);
+		return highestCol;
+	}
+	// set all column heights to the tallest column's height
+	($('.card').find('div').height(getActualHeight()));
 
 });
 

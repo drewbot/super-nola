@@ -233,7 +233,6 @@ section.product {
 	background-repeat: no-repeat;
   background-size: 100%;
   .overlay {
-  	padding-top: 45px;
   	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
 		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -243,7 +242,7 @@ section.product {
 		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
   	.container-fluid {
-			padding: 70px 10px 70px 10px;
+			padding: 70px 10px 0 10px;
 			h2 {
 				margin-bottom: 10px;
 				color: $beige;
@@ -265,11 +264,12 @@ section.product {
 					img {
 						display: block;
 						margin: 0 auto 20px auto;
-						width: 70%;
+						width: 65%;
 					}
-					h3 {
+					span {
+						display: block;
 						text-align: center;
-						color: $dark-brown;
+						font-size: 1.15em;
 					}
 				}
 			}
@@ -335,6 +335,7 @@ section.shop {
 	.container-fluid {
 		padding: 0 0 70px 0;
 		.shop-container {
+			padding-top: 70px;
 			color: lighten($dark-brown, 65%);
 			h2 {
 				margin-bottom: 70px;
@@ -367,13 +368,12 @@ section.shop {
 
 // Contact
 section.contact {
-	background: url('../images/super-nola-granola-pans.jpg');
-	background-repeat: no-repeat;
-  background-size: 100%;
 	.contact-content {
-		padding: 0 10px 0 10px;
     .contact-links {
-      padding: 70px 30px 70px 30px;
+			background: url('../images/super-nola-granola-pans.jpg');
+			background-repeat: no-repeat;
+		  background-size: 100%;
+      padding: 50px 30px 50px 30px;
       line-height: 3.4em;
       color: $beige;
       h2 {
@@ -399,7 +399,7 @@ section.contact {
 	          font-size: 1.3em;
 	        }
 	        &:hover {
-	          background-color: $dark-brown;
+	          color: lighten($dark-brown, 10%);
 	        }
 	      }
 	    }
@@ -449,7 +449,7 @@ section.contact {
           padding: 16px 25px 16px 25px;
           width: auto;
           @include paytone();
-          font-size: 1.8em;
+					font-size: 1.5em;
 					background: url('../images/paper-bag-texture-menu.png');
 					background-repeat: no-repeat;
 				  background-size: cover;
@@ -586,10 +586,15 @@ section.form-confirmation {
 	section.product {
 	  .overlay {
 	  	.container-fluid {
+				padding: 50px 10px 0 10px;
 				.card {
+					margin-bottom: 40px;
 					div {
 						&:nth-child(-n+2){
 							margin-bottom: 0px;
+						}
+						span {
+							font-size: 1.4em;
 						}
 					}
 				}
@@ -612,6 +617,7 @@ section.form-confirmation {
 
 	section.shop {
 		.container-fluid {
+			padding: 50px 0 50px 0;
 			.shop-container {
 				padding-top: 200px;
 			}
@@ -627,8 +633,12 @@ section.form-confirmation {
 	}
 
 	section.contact {
+		background: url('../images/super-nola-granola-pans.jpg');
+		background-repeat: no-repeat;
+	  background-size: 100%;
 		.contact-content {
 	    .contact-links {
+				background: none;
 	      line-height: 3.4em;
 	      color: $beige;
 	      h2 {
@@ -643,6 +653,9 @@ section.form-confirmation {
 	      form {
 	        .contact-name, .contact-email, .contact-message {
 	          height: 60px;
+					}
+					.contact-submit {
+						font-size: 1.75em;
 					}
 				}
 			}
