@@ -251,15 +251,17 @@ section.product {
 				}
 			}
 			.card {
-				padding: 50px 20px 50px 20px;
+				padding: 20px;
 				background-color: $beige;
 				border-radius: 6px;
 				div {
-					&:nth-child(-n+2){
-						margin-bottom: 40px;
-					}
+					padding: 40px 0 40px 0;
+					border-radius: 8px;
+					transition: all 0.2s ease;
 					&:hover {
 						cursor: pointer;
+						background-color: lighten($dark-brown, 10%);
+						color: $beige;
 					}
 					img {
 						display: block;
@@ -301,6 +303,9 @@ div.product-details {
 				top: 20px;
 				right:20px;
 				cursor: pointer;
+				&:hover {
+					color: lighten($dark-brown, 20%);
+				}
 				strong {
 					margin-left: 10px;
 					font-size: 1.8em;
@@ -477,7 +482,7 @@ footer {
 		padding: 70px 0 70px 0;
 		ul li {
 			display: inline-block;
-			margin: 0 30px 85px 0;
+			margin: 0 30px 15px 0;
 			font-size: 1em;
 			a {
 				text-decoration: underline;
@@ -665,6 +670,7 @@ section.form-confirmation {
 	footer {
 		.container-fluid {
 			ul li {
+				margin: 0 30px 65px 0;
 				font-size: 1.4em;
 			}
 		}
