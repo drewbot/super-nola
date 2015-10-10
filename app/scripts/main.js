@@ -114,32 +114,38 @@ $(document).ready(function(){
 	$('.caw').click(function(){
 		$('.product-details').addClass('show');
 		$('.caw-details').addClass('show');
+		$('body').css('overflow-y', 'hidden');
 	});
 
 	$('.pfp').click(function(){
 		$('.product-details').addClass('show');
 		$('.pfp-details').addClass('show');
+		$('body').css('overflow-y', 'hidden');
 	});
 
 	$('.bca').click(function(){
 		$('.product-details').addClass('show');
 		$('.bca-details').addClass('show');
+		$('body').css('overflow-y', 'hidden');
 	});
 
 	$('.pvh').click(function(){
 		$('.product-details').addClass('show');
 		$('.pvh-details').addClass('show');
+		$('body').css('overflow-y', 'hidden');
 	});
 
 	// Close product details modal with "x"
 	$('.close').click(function(){
 		$('.product-details').removeClass('show');
 		$('.product-details').find('.row').removeClass('show');
+		$('body').css('overflow-y', 'auto');
 	});
 	// Close product details modal by clicking the background
 	$('.product-details').click(function(){
 		$('.product-details').removeClass('show');
 		$('.product-details').find('.row').removeClass('show');
+		$('body').css('overflow-y', 'auto');
 	});
 	// Prevent clicking the container from triggering close
 	$('.product-details').find('.row').click(function(event) {

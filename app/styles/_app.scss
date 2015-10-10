@@ -111,8 +111,8 @@ header {
 		background-color: $beige;
 		button.nav-menu {
 			position: absolute;
-			width: 104px;
-			padding: 16px 25px 16px 25px;
+			width: 96px;
+			padding: 16px 20px 16px 20px;
 			background: url('../images/paper-bag-texture-menu.png');
 			background-repeat: no-repeat;
 		  background-size: cover;
@@ -123,7 +123,7 @@ header {
 		nav {
 			position: absolute;
 			top: -164px;
-			width: 104px;
+			width: 96px;
 			font-size: 0.85em;
 			background: url('../images/paper-bag-texture.png');
 			background-repeat: no-repeat;
@@ -139,16 +139,16 @@ header {
 					line-height: 1.4;
 					&:first-of-type {
 						a {
-							padding: 59px 26px 0 26px;
+							padding: 59px 20px 0 20px;
 						}
 					}
 					&:last-of-type {
 						a {
-							padding: 0 26px 16px 26px;
+							padding: 0 20px 16px 20px;
 						}
 					}
 					a {
-						padding: 0 26px 0 26px;
+						padding: 0 20px 0 20px;
 					}
 				}
 			}
