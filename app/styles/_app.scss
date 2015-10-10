@@ -166,14 +166,7 @@ section.intro {
   .overlay {
   	padding-top: 25px;
   	height: 220px;
-  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
-		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  	@include background-gradient(100%);
   }
 	img.logo {
 		display: block;
@@ -233,14 +226,7 @@ section.product {
 	background-repeat: no-repeat;
   background-size: 100%;
   .overlay {
-  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
-		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  	@include background-gradient(100%);
   	.container-fluid {
 			padding: 70px 10px 0 10px;
 			h2 {
@@ -504,27 +490,21 @@ footer {
 
 // Form Confirmation
 section.form-confirmation {
-	min-height: 700px;
-	height: 100vh;
 	background: url('../images/super-nola-granola-pans.jpg');
 	background-repeat: no-repeat;
   background-size: 100%;
   color: $beige;
   .overlay {
-  	padding-top: 45px;
+  	padding-top: 25px;
   	min-height: 700px;
-		height: 100vh;
-  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e040a+0,000000+100&amp;0.85+0,0+100 */
-		background: -moz-linear-gradient(top,  rgba(30,4,10,0.75) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,4,10,0.75)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  	@include background-gradient(40%);
   }
+	img {
+		width: 100%;
+		margin-bottom: 15px;
+	}
   h2 {
-  	margin-bottom: 30px;
+  	margin-bottom: 15px;
   }
   h1 {
   	a {
@@ -677,6 +657,18 @@ section.form-confirmation {
 		}
 	}
 
+	section.form-confirmation {
+		.overlay {
+			@include background-gradient(60%);
+		}
+		img {
+	  	margin-bottom: 22px;
+	  }
+		h2 {
+	  	margin-bottom: 22px;
+	  }
+	}
+
 }
 
 @media only screen and (min-width: $screen-md-min) {
@@ -735,6 +727,18 @@ section.form-confirmation {
 		.container-fluid {
 			padding: 70px 0 70px 0;
 		}
+	}
+
+	section.form-confirmation {
+		.overlay {
+			@include background-gradient(100%);
+		}
+		img {
+	  	margin-bottom: 30px;
+	  }
+		h2 {
+	  	margin-bottom: 30px;
+	  }
 	}
 
 }
