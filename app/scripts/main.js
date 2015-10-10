@@ -19,9 +19,23 @@ function getActualHeight(){
 // set all column heights to the tallest column's height
 $('.card').find('div').height(getActualHeight());
 
+/////////////////////////////////////////// Page Init
+$( document ).on( 'pageinit', function( event ) {
+	console.log('page init');
+	// set all column heights to the tallest column's height
+  $('.card').find('div').height(getActualHeight());
+});
 
+/////////////////////////////////////////// Window loaded
+$( window ).load(function() {
+	console.log('window loaded');
+	// set all column heights to the tallest column's height
+	$('.card').find('div').height(getActualHeight());
+});
+
+/////////////////////////////////////////// Document Ready
 $(document).ready(function(){
-	// console.log('document ready');
+	console.log('document ready');
 
 	// // Image replace based on screen width
 	// $(window).resize(function(){
@@ -46,11 +60,14 @@ $(document).ready(function(){
 
 	// Show Nav (Mobile)
 	$('.nav-menu').click(function(){
-		$('nav').toggleClass('show');
-		if ($('nav').hasClass('show')) {
+		if ($('nav').hasClass('hide')) {
 			$('button.nav-menu').text("Hide");
+			$('nav').addClass('show');
+			$('nav').removeClass('hide');
 		} else {
 			$('button.nav-menu').text("Menu");
+			$('nav').removeClass('show');
+			$('nav').addClass('hide');
 		}
 	})
 
@@ -95,20 +112,6 @@ $(document).ready(function(){
 
 	// set all column heights to the tallest column's height
 	// maintain same column height so they don't stagger when one is taller
-	// Get the actual height after screen and columns' content shrinks
-	function getActualHeight(){
-		// set the product columns' height back to auto
-		$('.card').find('div').height('auto');
-		// get the highest div height of the columns
-		var highestCol = Math.max(
-			$('.caw').height(),
-			$('.pfp').height(),
-			$('.bca').height(),
-			$('.pvh').height()
-		);
-		return highestCol;
-	}
-	// set all column heights to the tallest column's height
 	$('.card').find('div').height(getActualHeight());
 
 	// Open product details modal
@@ -200,23 +203,8 @@ $(document).ready(function(){
 $(window).resize(function () {
 	console.log('window resized');
 
-	// maintain same column height so they don't stagger when one is taller
-	// on window resize because we already do this on document ready
-	// but columns' content will resize per screen size
-	// Get the actual height after screen and columns' content shrinks
-	function getActualHeight(){
-		// set the product columns' height back to auto
-		$('.card').find('div').height('auto');
-		// get the highest div height of the columns
-		var highestCol = Math.max(
-			$('.caw').height(),
-			$('.pfp').height(),
-			$('.bca').height(),
-			$('.pvh').height()
-		);
-		return highestCol;
-	}
 	// set all column heights to the tallest column's height
+	// maintain same column height so they don't stagger when one is taller
 	$('.card').find('div').height(getActualHeight());
 
 });
