@@ -110,10 +110,6 @@ $(document).ready(function(){
 
 	/////////////////////////////////// Product
 
-	// set all column heights to the tallest column's height
-	// maintain same column height so they don't stagger when one is taller
-	$('.card').find('div').height(getActualHeight());
-
 	// Open product details modal
 	$('.caw').click(function(){
 		$('.product-details').addClass('show');
