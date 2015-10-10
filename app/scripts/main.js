@@ -2,6 +2,10 @@
 
 console.log('js loaded');
 
+// Store true if device is touch
+// store false is device is not touch
+var isTouchDevice = 'ontouchstart' in document.documentElement;
+
 // maintain same column height so they don't stagger when one is taller
 // Get the actual height after screen and columns' content shrinks
 function getActualHeight(){
@@ -52,22 +56,30 @@ $(document).ready(function(){
 	// Show Nav (Desktop)
 	$('.menu').mouseenter(function(){
 		$('nav').addClass('show');
+		$('nav').removeClass('hide');
 	});
 
 	$('.menu').mouseleave(function(){
 		$('nav').removeClass('show');
+		$('nav').addClass('hide');
 	});
+
+	// Store true if device is touch
+	// store false is device is not touch
+	var isTouchDevice = 'ontouchstart' in document.documentElement;
 
 	// Show Nav (Mobile)
 	$('.nav-menu').click(function(){
-		if ($('nav').hasClass('hide')) {
-			$('button.nav-menu').text("Hide");
-			$('nav').addClass('show');
-			$('nav').removeClass('hide');
-		} else {
-			$('button.nav-menu').text("Menu");
-			$('nav').removeClass('show');
-			$('nav').addClass('hide');
+		if (window.navigator.msMaxTouchPoints || isTouchDevice) {
+			if ($('nav').hasClass('hide')) {
+				$('button.nav-menu').text("Hide");
+				$('nav').addClass('show');
+				$('nav').removeClass('hide');
+			} else {
+				$('button.nav-menu').text("Menu");
+				$('nav').removeClass('show');
+				$('nav').addClass('hide');
+			}
 		}
 	})
 
