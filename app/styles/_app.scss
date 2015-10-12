@@ -279,15 +279,17 @@ div.product-details {
 	background-color: rgba(0, 0, 0, 0.8);
 	overflow-y: scroll;
 	.container-fluid {
-		padding: 70px 10px 0 10px;
+		padding: 20px 10px 0 10px;
 		overflow: scroll;
 		-webkit-overflow-scrolling: touch;
 		.row {
 			display: none;
 			position: relative;
-			padding: 50px 20px 50px 20px;
-			background-color: $beige;
-			border-radius: 6px;
+	    padding: 50px 20px 50px 20px;
+			height: 95vh;
+	    background-color: $beige;
+	    border-radius: 6px;
+	    overflow: scroll;
 			.close {
 				position: absolute;
 				top: 20px;
