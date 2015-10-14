@@ -292,15 +292,18 @@ div.product-details {
 	    overflow: scroll;
 			.close {
 				position: absolute;
-				top: 20px;
-				right:20px;
-				cursor: pointer;
+		    top: 20px;
+		    right: 20px;
+				padding: 3px 28px 0 0;
+		    cursor: pointer;
 				&:hover {
 					color: lighten($dark-brown, 20%);
 				}
 				strong {
-					margin-left: 10px;
-					font-size: 1.8em;
+					position: absolute;
+					top: 0;
+					right: 0;
+					font-size: 2.2em;
 					line-height: 0.5;
 				}
 			}
