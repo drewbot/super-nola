@@ -510,7 +510,9 @@ footer {
 }
 
 // Form Confirmation
-section.form-confirmation {
+section.form-confirmation,
+.confirmed-order,
+.cancelled-order {
 	background: url('../images/super-nola-granola-pans.jpg');
 	background-repeat: no-repeat;
   background-size: 100%;
@@ -701,7 +703,9 @@ section.form-confirmation {
 		}
 	}
 
-	section.form-confirmation {
+	section.form-confirmation,
+	.confirmed-order,
+	.cancelled-order {
 		.overlay {
 			@include background-gradient(60%);
 		}
@@ -773,7 +777,9 @@ section.form-confirmation {
 		}
 	}
 
-	section.form-confirmation {
+	section.form-confirmation,
+	.confirmed-order,
+	.cancelled-order {
 		.overlay {
 			@include background-gradient(100%);
 		}
