@@ -335,10 +335,23 @@ section.shop {
 	.container-fluid {
 		padding: 0 0 70px 0;
 		.shop-container {
-			padding-top: 70px;
+			padding: 0 30px 0 30px;
 			color: lighten($dark-brown, 65%);
 			h2 {
-				margin-bottom: 70px;
+				text-align: left;
+			}
+			h3 {
+				text-align: left;
+				margin-bottom: 30px;
+			}
+			label {
+				display: block;
+				text-align: center;
+			}
+			.paypal-button-img {
+				margin: 0 auto;
+				width: auto;
+				border: none;
 			}
 		}
 		.locations {
@@ -526,8 +539,26 @@ section.form-confirmation {
   }
 }
 
-@media only screen and (min-width: $screen-xs-min) {
-
+@media only screen and (min-width: 510px) {
+	section.shop {
+		.container-fluid {
+			padding: 50px 0 50px 0;
+			.shop-container {
+				padding: 0 30px 0 30px;
+			}
+			.locations {
+				ul.location-list {
+					font-size: 1em;
+					> li {
+						width: 48.5%;
+					}
+					ul.location-address {
+						font-size: 0.55em;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: $screen-sm-min) {
@@ -615,11 +646,14 @@ section.form-confirmation {
 		.container-fluid {
 			padding: 50px 0 50px 0;
 			.shop-container {
-				padding-top: 200px;
+				padding: 0 30px 0 30px;
 			}
 			.locations {
 				ul.location-list {
 					font-size: 1em;
+					> li {
+						width: 33.33333%;
+					}
 					ul.location-address {
 						font-size: 0.55em;
 					}
