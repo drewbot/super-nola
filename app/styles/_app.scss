@@ -313,6 +313,7 @@ div.product-details {
 		    display: block;
 				&.nutrition-facts {
 					width: 90%;
+					float: left;
 				}
 				&.sc-product {
 					margin-top: 15px;
@@ -335,18 +336,60 @@ section.shop {
 	.container-fluid {
 		padding: 0 0 70px 0;
 		.shop-container {
-			padding: 0 30px 0 30px;
-			color: lighten($dark-brown, 65%);
+			padding: 70px 30px 30px 30px;
+			color: lighten($dark-brown, 50%);
 			h2 {
 				text-align: left;
 			}
 			h3 {
 				text-align: left;
-				margin-bottom: 30px;
 			}
-			label {
-				display: block;
+			.shop-item {
 				text-align: center;
+				figure {
+					img {
+						width: 80%;
+					}
+					figcaption {
+						margin-bottom: 10px;
+						font-size: 1.2em;
+					}
+				}
+				span {
+					@include paytone();
+					font-size: 1.7em;
+					color: lighten($dark-brown, 35%);
+				}
+				.select-purchase {
+					margin-top: 12px;
+					table {
+						width: 100%;
+						.select-purchase-label {
+							font-size: 1.15em;
+							margin-bottom: 10px;
+						}
+						select {
+							margin-top: 10px;
+						}
+					}
+				}
+				.paypal-button-img {
+					margin: 10px auto 0 auto;
+					width: auto;
+					border: none;
+				}
+			}
+		}
+		.checkout {
+			padding: 40px 0 20px 0;
+			background-color: darken($green, 14%);
+			text-align: center;
+			color: lighten($beige, 20%);
+			h2 {
+
+			}
+			table {
+				width: 100%;
 			}
 			.paypal-button-img {
 				margin: 0 auto;
@@ -355,7 +398,7 @@ section.shop {
 			}
 		}
 		.locations {
-			padding: 0 30px 0 30px;
+			padding: 70px 30px 0px 30px;
 			h2 {
 				text-align: left;
 			}
@@ -544,11 +587,11 @@ section.form-confirmation,
 @media only screen and (min-width: 510px) {
 	section.shop {
 		.container-fluid {
-			padding: 50px 0 50px 0;
 			.shop-container {
-				padding: 0 30px 0 30px;
+				padding: 75px 30px 30px 30px;
 			}
 			.locations {
+				padding: 75px 30px 0px 30px;
 				ul.location-list {
 					font-size: 1em;
 					> li {
@@ -613,9 +656,8 @@ section.form-confirmation,
 	section.product {
 	  .overlay {
 	  	.container-fluid {
-				padding: 50px 10px 0 10px;
+				padding: 80px 10px 0 10px;
 				.card {
-					margin-bottom: 40px;
 					div {
 						padding: 40px 0 40px 0;
 						&:nth-child(-n+2){
@@ -640,17 +682,32 @@ section.form-confirmation,
 				p {
 					font-size: 1.15em;
 				}
+				img {
+					&.nutrition-facts {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
 
 	section.shop {
 		.container-fluid {
-			padding: 50px 0 50px 0;
 			.shop-container {
-				padding: 0 30px 0 30px;
+				padding: 80px 30px 30px 30px;
+				.shop-item {
+					figure {
+						figcaption {
+							font-size: 1.5em;
+						}
+					}
+					span {
+						font-size: 2em;
+					}
+				}
 			}
 			.locations {
+				padding: 85px 30px 0px 30px;
 				ul.location-list {
 					font-size: 1em;
 					> li {
@@ -763,6 +820,16 @@ section.form-confirmation,
 		}
 	}
 
+	section.product {
+	  .overlay {
+	  	.container-fluid {
+				.card {
+					margin-bottom: 100px;
+				}
+			}
+		}
+	}
+
 	div.product-details {
 		.container-fluid {
 			.row {
@@ -773,7 +840,7 @@ section.form-confirmation,
 
 	section.shop {
 		.container-fluid {
-			padding: 70px 0 70px 0;
+
 		}
 	}
 

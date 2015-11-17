@@ -132,7 +132,7 @@
           </p>
         </div>
         <div class="col-xs-6 col-sm-3">
-          <img src="images/nutrition-facts.png" class="nutrition-facts">
+          <img src="images/nutrition-facts-caw.jpg" class="nutrition-facts">
         </div>
         <div class="col-xs-6 col-sm-3">
           <img src="images/caw-label.png">
@@ -151,7 +151,7 @@
           </p>
         </div>
         <div class="col-xs-6 col-sm-3">
-          <img src="images/nutrition-facts.png" class="nutrition-facts">
+          <img src="images/nutrition-facts-pfp.jpg" class="nutrition-facts">
         </div>
         <div class="col-xs-6 col-sm-3">
           <img src="images/pfp-label.png">
@@ -170,7 +170,7 @@
           </p>
         </div>
         <div class="col-xs-6 col-sm-3">
-          <img src="images/nutrition-facts.png" class="nutrition-facts">
+          <img src="images/nutrition-facts-bca.jpg" class="nutrition-facts">
         </div>
         <div class="col-xs-6 col-sm-3">
           <img src="images/bca-label.png">
@@ -188,8 +188,8 @@
             Contains coconut oil, hazelnuts (filberts).
           </p>
         </div>
-        <div class="col-xs-6 col-sm-3">
-          <img src="images/nutrition-facts.png" class="nutrition-facts">
+        <div class="clearfix col-xs-6 col-sm-3">
+          <img src="images/nutrition-facts-pvh.jpg" class="nutrition-facts">
         </div>
         <div class="col-xs-6 col-sm-3">
           <img src="images/pvh-label.png">
@@ -201,49 +201,66 @@
 
   <section class="shop" id="shop">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 shop-container">
+      <div class="row shop-container">
+        <div class="col-xs-12">
           <h2>Purchase now</h2>
           <h3>with PayPal</h3>
-          <!-- Tester button start -->
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="S6W6362LPRD4Q">
-          <table>
-            <tr><td>
-              <input type="hidden" name="on0" value="Types">Types
-            </td></tr>
-            <tr><td>
-              <select name="os0">
-              	<option value="Cranberry Apple Walnut Granola">Cranberry Apple Walnut Granola </option>
-              	<option value="Pumpkin Fig Pecan Granola">Pumpkin Fig Pecan Granola </option>
-              	<option value="Banana Choco Almond Granola">Banana Choco Almond Granola </option>
-              	<option value="Pear Vanilla Hazelnut Granola">Pear Vanilla Hazelnut Granola </option>
-              </select>
-            </td></tr>
-          </table>
-          <input class="paypal-button-img" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </div>
+        <div class="shop-item col-xs-12 col-sm-6">
+          <!-- Single button start -->
+          <figure>
+            <img src="images/individual-packages.png" alt="">
+            <figcaption>Single 8oz package</fig--caption>
+          </figure>
+          <span class="price">$7.00</span>
+          <form class="select-purchase" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="S6W6362LPRD4Q">
+            <table>
+              <tr><td class="select-purchase-label">
+                <input type="hidden" name="on0" value="Types">Select an item
+              </td></tr>
+              <tr><td>
+                <select name="os0">
+                	<option value="Cranberry Apple Walnut Granola">Cranberry Apple Walnut Granola </option>
+                	<option value="Pumpkin Fig Pecan Granola">Pumpkin Fig Pecan Granola </option>
+                	<option value="Banana Choco Almond Granola">Banana Choco Almond Granola </option>
+                	<option value="Pear Vanilla Hazelnut Granola">Pear Vanilla Hazelnut Granola </option>
+                </select>
+              </td></tr>
+            </table>
+            <input class="paypal-button-img" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
           </form>
-          <!-- Tester button end -->
-          <!-- Paypal button start -->
+          <!-- Single button end -->
+        </div>
+        <div class="shop-item col-xs-12 col-sm-6">
+          <!-- Sampler button start -->
+          <figure>
+            <img src="images/sampler.png" alt="">
+            <figcaption>Sampler 12oz (one 3oz package of each flavor)</figcaption>
+          </figure>
+          <span class="price">$12.50</span>
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="F4VG69E8HS8HJ">
-          <input class="paypal-button-img" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="F4VG69E8HS8HJ">
+            <input class="paypal-button-img" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
           </form>
-          <!-- Paypal button end -->
-          <!-- Paypal Checkout button start -->
-          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+          <!-- Sampler button end -->
+        </div>
+      </div>
+      <div class="row checkout">
+        <h2>CHECKOUT</h2>
+        <!-- Paypal Checkout button start -->
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIG1QYJKoZIhvcNAQcEoIIGxjCCBsICAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBXF1V5kdcQy1SFHmJCd1DcVuO4sLJUXS9KueOBCiLKC9zJuZLI33yEagFqOmmBVFrRGFo0Kwo+sgWBNhODxtozRfu2SjjKdqXecOfMpRI2od2w8nraxv5lZlyri5qFNBqb7WnCkH/MOD6BR9kMPHjRFpk2gQARe0eN0DtMw4Lq3TELMAkGBSsOAwIaBQAwUwYJKoZIhvcNAQcBMBQGCCqGSIb3DQMHBAgoP5IA8oVNR4AwoN7slvnxN2KGo2k3nvp/gpwgbsmdzqyPv64NdgGP3ux4p3uZGN9+1V2sRCcE4tGcoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTUxMTE1MjA0MjQ4WjAjBgkqhkiG9w0BCQQxFgQUm8RAQEGfW4NKDWKGkqYGmzObGGIwDQYJKoZIhvcNAQEBBQAEgYAvXzR4SRlm4LinS8YycveOGSidy17TAdSJjbSrHwibBhcnfzaNcJ3NwN9vumS6g3QsQBhUnXjMqU9ppPkZua0wf72aFXHHWlmANkGj6x1kQ+GK808ese+oZXv6Tc1m2a5EIBOP0U7kwYqZmswQd6Ns16+l/voulBuRaIfOqj67Lg==-----END PKCS7-----
           ">
           <input class="paypal-button-img" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
-          <!-- Paypal Checkout button end -->
-        </div>
+        </form>
+        <!-- Paypal Checkout button end -->
       </div>
       <div class="row locations">
         <h2>Shop Locally</h2>
