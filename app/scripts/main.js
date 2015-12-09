@@ -20,14 +20,86 @@ function getActualHeight(){
 	);
 	return highestCol;
 }
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Begin reusable function
+// console.log($('.location-list > li'));
+// console.log(Array.isArray($('.location-list > li')));
+//
+// if( (typeof $('.location-list > li') === "object") && ($('.location-list > li') !== null) ) {
+//   console.log('is an object');
+// } else {
+// 	console.log('is NOT an object');
+// };
+//
+// function findWithAttr(array, attr, value) {
+//     for(var i = 0; i < array.length; i += 1) {
+//         if(array[i][attr] === value) {
+//             return i;
+//         }
+//     }
+// }
+//
+// var arrayOfElements = new Array();
+//
+//
+// function getElementHeight(selector){
+// 	var elementObject = $(selector);
+// 	console.log(elementObject);
+// 	$(selector).height('auto');
+// 	var elementArray = $.map($(elementObject), function(value, index) {
+// 								return [value];
+// 							});
+// 	console.log(elementArray);
+// 	function arrayOfHeights() {
+// 		for(var i = 0; i < elementArray.length; i += 1) {
+// 			var num = i + 1;
+// 			return $(selector + ':nth-of-type(' + num + ')').height();
+// 		}
+// 	}
+// 	var highestCol = Math.max(arrayOfHeights());
+// 	return highestCol;
+// }
+//
+// getElementHeight($('.location-list > li'));
+
+// var max = Math.max(...array);
+// console.log(max);
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+function getLiHeight(){
+	// set the product columns' height back to auto
+	$('.location-list > li').height('auto');
+	// get the highest div height of the columns
+	var highestCol = Math.max(
+		$('.location-list > li:nth-of-type(1)').height(),
+		$('.location-list > li:nth-of-type(2)').height(),
+		$('.location-list > li:nth-of-type(3)').height(),
+		$('.location-list > li:nth-of-type(4)').height(),
+		$('.location-list > li:nth-of-type(5)').height(),
+		$('.location-list > li:nth-of-type(6)').height(),
+		$('.location-list > li:nth-of-type(7)').height(),
+		$('.location-list > li:nth-of-type(8)').height(),
+		$('.location-list > li:nth-of-type(9)').height(),
+		$('.location-list > li:nth-of-type(10)').height(),
+		$('.location-list > li:nth-of-type(11)').height(),
+		$('.location-list > li:nth-of-type(12)').height()
+	);
+	console.log(highestCol);
+	return highestCol;
+}
 // set all column heights to the tallest column's height
 $('.card').find('div').height(getActualHeight());
+$('.location-list > li').height(getLiHeight());
 
 /////////////////////////////////////////// Page Init
 $( document ).on( 'pageinit', function( event ) {
 	console.log('page init');
 	// set all column heights to the tallest column's height
   $('.card').find('div').height(getActualHeight());
+	$('.location-list > li').height(getLiHeight());
 });
 
 /////////////////////////////////////////// Window loaded
@@ -35,6 +107,7 @@ $( window ).load(function() {
 	console.log('window loaded');
 	// set all column heights to the tallest column's height
 	$('.card').find('div').height(getActualHeight());
+	$('.location-list > li').height(getLiHeight());
 });
 
 /////////////////////////////////////////// Document Ready
@@ -220,7 +293,7 @@ $(window).resize(function () {
 	// set all column heights to the tallest column's height
 	// maintain same column height so they don't stagger when one is taller
 	$('.card').find('div').height(getActualHeight());
-
+	$('.location-list > li').height(getLiHeight());
 });
 
 
