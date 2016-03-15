@@ -145,16 +145,16 @@ $(document).ready(function(){
 	$('.nav-menu').click(function(){
 		if (window.navigator.msMaxTouchPoints || isTouchDevice) {
 			if ($('nav').hasClass('hide')) {
-				$('button.nav-menu').text("Hide");
+				$('button.nav-menu').text('Hide');
 				$('nav').addClass('show');
 				$('nav').removeClass('hide');
 			} else {
-				$('button.nav-menu').text("Menu");
+				$('button.nav-menu').text('Menu');
 				$('nav').removeClass('show');
 				$('nav').addClass('hide');
 			}
 		}
-	})
+	});
 
 	/////////////////////////////////// Scroll To Section
 	// (event.preventDefault() stops the flicker on click)
@@ -165,28 +165,28 @@ $(document).ready(function(){
     }, 900);
 	});
 
-	$( "a[href|='#about']" ).click(function(event) {
+	$( 'a[href|="#about"]' ).click(function(event) {
 		event.preventDefault();
     $('html, body').animate({
       scrollTop: $('#about').offset().top
     }, 900);
 	});
 
-	$( "a[href|='#product']" ).click(function(event) {
+	$( 'a[href|="#product"]').click(function(event) {
 		event.preventDefault();
     $('html, body').animate({
       scrollTop: $('#product').offset().top
     }, 900);
 	});
 
-	$( "a[href|='#shop']" ).click(function(event) {
+	$( 'a[href|="#shop"]' ).click(function(event) {
 		event.preventDefault();
     $('html, body').animate({
       scrollTop: $('#shop').offset().top
     }, 900);
 	});
 
-	$( "a[href|='#contact']" ).click(function(event) {
+	$( 'a[href|="#contact"]' ).click(function(event) {
 		event.preventDefault();
     $('html, body').animate({
       scrollTop: $('#contact').offset().top
@@ -236,6 +236,11 @@ $(document).ready(function(){
 	$('.product-details').find('.row').click(function(event) {
 	  event.stopPropagation();
 	});
+
+	/////////////////////////////////// Locations List
+	// $('#showLocations').click( function() {
+	// 	$('#locationList').slideToggle();
+	// });
 
 	/////////////////////////////////// Contact form
 	// focus in on new item input changes border color

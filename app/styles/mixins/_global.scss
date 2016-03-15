@@ -92,3 +92,19 @@
   background: linear-gradient(to bottom,  rgba(30,4,10,0.75) 0%,rgba(0,0,0,0) $height-percent); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91e040a', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
+
+// Apply to Parent element, all direct children will have equal heights
+@mixin flex-height() {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  > * {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
