@@ -18,6 +18,9 @@
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="../bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.13/webcomponents-lite.min.js"></script> 
+  <link rel="import" href="https://components.cloudstitch.com/cloudstitch-handlebars.html"/>
+
   <link href='http://fonts.googleapis.com/css?family=Hammersmith+One|ABeeZee|Paytone+One|Amaranth|Imprima' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -84,7 +87,8 @@
           <h3>When the forces of nature and homemade goodness collided...</h3>
           <p>Super 'Nola Natural was created through an earnest desire to jumpstart my day with a breakfast that was high in fiber and protein, contained no refined sugar and was chock full of <span class="italic">whole</span> foods, <span class="italic">real</span> foods, <span class="italic">natural</span> foods, <span class="italic">super</span> foods!</p>
           <p>We take pride in that fact that our products are made in Greenville, South Carolina, using as many locally sourced ingredients as possible. We are certified through the South Carolina Department of Agriculture as a SC Product.  We are also a member of the South Carolina Specialty Food Association.</p>
-          <a href="http://www.wyff4.com/entertainment/launch-party-for-super-nola-natural-set-for-saturday-aug-29/34861022">See the news piece WYFF News4 of Greenville did about us last year.</a>
+          <a href="http://www.wyff4.com/entertainment/launch-party-for-super-nola-natural-set-for-saturday-aug-29/34861022">See the news piece WYFF News4 of Greenville did about us last year.</a><br><br>
+          <a href="http://towncarolina.com/article/mixed-bag/">Read the article that Town Magazine wrote about us.</a>
         </div>
       </div>
     </div>
@@ -275,103 +279,7 @@
 
   <section class="locations" id="locations">
     <div class="container-fluid">
-      <div class="row locations">
-        <h2>Shop Locally</h2>
-        <h3>at the Following Locations:</h3>
-        <!-- <button id="showLocations">show locations</button> -->
-        <ul class="location-list" id="locationList">
-          <li class="col-xs-12">Ingles Markets
-            <ul class="location-address">
-              <li>Serving several locations</li>
-              <li>across the Upstate</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Swamp Rabbit Grocery
-            <ul class="location-address">
-              <li>205 Cedar Lane Rd,</li>
-              <li>Greenville, SC 29611</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Greenville Jerky and Vine
-            <ul class="location-address">
-              <li>36 S Main St,</li>
-              <li>Greenville, SC 29601</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Travelers Rest Farmers Market
-            <ul class="location-address">
-              <li>225 Wilhelm Winter St,</li>
-              <li>Travelers Rest, SC 29690</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Southern Delight
-            <ul class="location-address">
-              <li>114 E. Rutherford St,</li>
-              <li>Landrum, SC 29356</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Leopard Forest Coffee Company
-            <ul class="location-address">
-              <li>27 S Main Street,</li>
-              <li>Travelers Rest, SC 29690</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">The Hungry Drover
-            <ul class="location-address">
-              <li>2601 Tigerville Road,</li>
-              <li>Travelers Rest, SC 29690</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Stomping Grounds Coffeehouse
-            <ul class="location-address">
-              <li>208 Trade Street,</li>
-              <li>Greer, SC 29651</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">*Coming Soon to Whole Foods
-            <ul class="location-address">
-              <li>1140 Woodruff Road,</li>
-              <li>Greenville, SC 29607</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Chattooga Belle Farm
-            <ul class="location-address">
-              <li>454 Damascus Church Road,</li>
-              <li>Longcreek, SC 29658</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Greer Farmers Market
-            <ul class="location-address">
-              <li>The Depot,</li>
-              <li>Greer, SC 29651</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Foodies Farm Shop
-            <ul class="location-address">
-              <li>300 Randall Street, Suite G,</li>
-              <li>Greer, SC 29651</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Mill Village Farms
-            <ul class="location-address">
-              <li>8 Lois Avenue,</li>
-              <li>Greenville, SC 29611</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">TD Greenville Saturday Market
-            <ul class="location-address">
-              <li>Main Street,</li>
-              <li>Greenville, SC 29601</li>
-            </ul>
-          </li>
-          <li class="col-xs-12">Adam's Mobile Market
-            <ul class="location-address">
-              <li>On the move,</li>
-              <li>In the Upstate</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <cloudstitch-handlebars user="supernola" app="supernola-locations-1"></cloudstitch-handlebars>
     </div>
   </section>
 
@@ -426,7 +334,7 @@
   <footer>
     <div class="container-fluid">
       <div class="row outer">
-        <div class="col-xs-12 col-sm-10">
+        <div class="col-xs-12 col-sm-8">
           <ul>
             <li>
               <a href="#intro">intro</a>
@@ -446,8 +354,11 @@
           </ul>
           <p>Copyright 2015, Super 'Nola Natural</p>
         </div>
-        <div class="cert-stamp hidden-xs col-sm-2">
+        <div class="cert-stamp col-xs-3 col-sm-2">
           <img src="images/certified-sc-product.png">
+        </div>
+        <div class="cert-stamp col-xs-3 col-sm-2">
+          <img src="images/livewell-logo.png">
         </div>
       </div>
     </div>
